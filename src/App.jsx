@@ -10,8 +10,9 @@ function App() {
 
   return (
     <>
-    <Header/>
+    
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path="/" element={<ProfilePage/>}/>
         <Route></Route>
