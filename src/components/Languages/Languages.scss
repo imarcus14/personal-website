@@ -17,11 +17,12 @@
     &__icon-list{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     &__icon{
         width: 4rem;
         height: 4rem;
-        padding: 0.75rem 0.5rem;
+        padding: 1.5rem 1rem;
         transition: transform .3s ease-out;
         &:hover{
             transform: scale(1.3);

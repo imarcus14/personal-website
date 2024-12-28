@@ -1,0 +1,35 @@
+
+.contact{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Teko";
+    color: #3B3545;
+    padding: 3rem 0 1.5rem 0;
+    &__title{
+        font-size: 1.5rem;
+        text-decoration: underline;
+        padding-bottom: 1rem;
+    }
+    &__img{
+        width: 3rem;
+        height: 3rem;
+    }
+    &__options{
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+    }
+    &__icon{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        font-size: 1.5rem;
+        
+    }
+    &__link{
+        text-decoration: none;
+        color: #3B3545;
+    }
+}

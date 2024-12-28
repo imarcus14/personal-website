@@ -11,9 +11,7 @@ const Header = () => {
             <Link className="header__link" to={"/projects"}> 
                 <h3>Projects</h3>
             </Link>
-            <Link className="header__link" to={"/contact"}> 
-                <h3>Contact</h3>
-            </Link>
+            
         </div>
      );
 }

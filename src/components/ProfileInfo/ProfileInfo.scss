@@ -17,6 +17,7 @@
     &__desc{
         display: flex;
         flex-direction: column;
+        width: 60%;
         gap: 1.5rem;
     }
 
@@ -29,5 +30,6 @@
     &__pic{
         height: 30rem;
         border-radius: 14rem;
+        width: 30%;
     }
 }
