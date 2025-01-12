@@ -1,0 +1,31 @@
+.language{
+    display: flex;
+    flex-direction: column;
+    color: #3B3545;
+    font-family: "Teko";
+    width: 90%;
+    margin: auto;
+    padding-bottom: 3rem;
+    &__current-title{
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+    &__working-title{
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+    &__icon-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__icon{
+        width: 4rem;
+        height: 4rem;
+        padding: 1.5rem 1rem;
+        transition: transform .3s ease-out;
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+}
