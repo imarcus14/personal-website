@@ -1,18 +1,77 @@
 .header{
     display: flex;
-    justify-content: end;
-    margin: 1.5rem;
-    padding-right: 1rem;
-    gap: 2rem;
+    justify-content: start;
+    height: 2rem;
+    align-items: center;
+    // margin: 1.5rem;
+    // padding-right: 1rem;
+    // padding-bottom: 2rem;
+    padding: 2rem 1rem;
+    // gap: 2rem;
     font-size: 1.5rem;
-    color: #3B3545;
+   
     font-family: "Jaldi";
+    background-color: #5F8575;
     &__link{
-        color: #3B3545;
+        color: black;
         text-decoration: none;  
         &--active{
-            font-size: 1.75rem;
+            
             text-decoration: underline;
         }
+    }
+}
+
+.header-logo{
+    display: flex;
+    flex-direction: column;
+}
+
+.i-logo{
+    height: 8%;
+    /* padding: 0; */
+    /* margin: 0; */
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.ivan-logo{
+    height: 8%;
+    /* padding: 0; */
+    position: absolute;
+    top: 45px;
+    left: -15px;
+}
+
+.header-links{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    left: 10rem;
+}
+
+.contact-options{
+    display: flex;
+    position: absolute;
+    align-items: baseline;
+    gap: 1rem;
+    right: 40px;
+    top: 25px;
+}
+
+.contact-img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact-icon{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 1.5rem;
+    transition: transform .3s ease-out;
+    &:hover{
+        transform: scale(1.3);
     }
 }
