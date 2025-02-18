@@ -1,20 +1,31 @@
 .header{
+    // display: flex;
+    // justify-content: start;
+    // height: 2rem;
+    // align-items: center;
+    // padding: 2rem 1rem;
+    // font-size: 1.5rem;
+    // font-family: "Jaldi";
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: absolute;
+    width: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2rem;
+    border-radius: 30px;
+    border: 1px solid rgba(18, 20, 32, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: start;
-    height: 2rem;
     align-items: center;
-    // margin: 1.5rem;
-    // padding-right: 1rem;
-    // padding-bottom: 2rem;
-    padding: 2rem 1rem;
-    // gap: 2rem;
-    font-size: 1.5rem;
-   
-    font-family: "Jaldi";
-    background-color: #5F8575;
+    justify-content: center;
+    
+  
     &__link{
-        color: black;
+        color: white;
         text-decoration: none;  
+        letter-spacing: 3px;
         &--active{
             
             text-decoration: underline;
@@ -22,33 +33,35 @@
     }
 }
 
-.header-logo{
-    display: flex;
-    flex-direction: column;
-}
+// .header-logo{
+//     display: flex;
+//     flex-direction: column;
+// }
 
-.i-logo{
-    height: 8%;
-    /* padding: 0; */
-    /* margin: 0; */
-    position: absolute;
-    top: 8px;
-    left: 15px;
-}
+// .i-logo{
+//     height: 8%;
+//     /* padding: 0; */
+//     /* margin: 0; */
+//     position: absolute;
+//     top: 8px;
+//     left: 15px;
+// }
 
-.ivan-logo{
-    height: 8%;
-    /* padding: 0; */
-    position: absolute;
-    top: 45px;
-    left: -15px;
-}
+// .ivan-logo{
+//     height: 8%;
+//     /* padding: 0; */
+//     position: absolute;
+//     top: 45px;
+//     left: -15px;
+// }
 
 .header-links{
     display: flex;
-    gap: 1rem;
-    position: absolute;
+    justify-content: space-around;
+    gap: 7rem;
     left: 10rem;
+    font-family: "Teko";
+    font-size: 1.5rem;
 }
 
 .contact-options{

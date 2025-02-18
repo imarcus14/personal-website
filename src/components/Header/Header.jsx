@@ -3,9 +3,7 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import github from "../../assets/icons/github.svg";
 import gmail from "../../assets/icons/gmail.svg";
-import ivan from "../../assets/icons/name.svg";
 import linkedin from "../../assets/icons/linkedin.png";
-import logo from "../../assets/icons/italic-i.svg";
 import { useState } from "react";
 
 const Header = () => {
@@ -17,11 +15,6 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="header-logo">
-        <img className="i-logo" src={logo} alt="I logo" />
-        <img className="ivan-logo" src={ivan} alt="Ivan" />
-      </div>
-
       <div className="header-links">
         <Link
           className={`header__link ${
@@ -41,9 +34,27 @@ const Header = () => {
         >
           <h3>Projects</h3>
         </Link>
+        <Link
+          className={`header__link ${
+            activeLink === "/projects" ? "header__link--active" : ""
+          }`}
+          to="/projects"
+          onClick={() => handleClick("/projects")}
+        >
+          <h3>About</h3>
+        </Link>
+        <Link
+          className={`header__link ${
+            activeLink === "/projects" ? "header__link--active" : ""
+          }`}
+          to="/projects"
+          onClick={() => handleClick("/projects")}
+        >
+          <h3>Contact</h3>
+        </Link>
       </div>
 
-      <div className="contact-options">
+      {/* <div className="contact-options">
         <div className="contact-icon">
           <Link to="https://www.linkedin.com/in/ivan-marcus/">
             <img className="contact-img" src={linkedin} alt="linkedin icon" />
@@ -59,7 +70,7 @@ const Header = () => {
             <img className="contact-img" src={github} alt="Gmail icon" />
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

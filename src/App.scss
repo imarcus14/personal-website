@@ -5,9 +5,26 @@
   margin: 0;
 }
 
-body{
-  // background-image: linear-gradient(#B8D8D8, #4F6367);
-  // background-repeat: none;
-  // background-position: center;
-  background-color: #83A986;
+// body{
+//   background-image: linear-gradient(#B8D8D8 40%, #4F6367 60%);
+//   background-repeat: no-repeat; /* Prevents repetition */
+//   background-position: center;
+//   background-size: cover; /* Makes the gradient cover the entire viewport */
+//   min-height: 100vh;
+  
+//   // background-color: #83A986;
+// }
+
+body {
+  background-image: linear-gradient(#2C2B3C, #121420);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background: transparent; /* Inherits background from body */
+  height: 150px; /* Adjust to match header height */
 }

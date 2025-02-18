@@ -1,11 +1,45 @@
 import "./ProfileInfo.scss";
 
+import { useEffect, useState } from "react";
+
+import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
 import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
 import logo from "../../assets/icons/italic-i.svg";
 import { motion } from "motion/react";
 import profilePic from "../../assets/photos/website-pic.jpg";
 
 const ProfileInfo = () => {
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const nameArray = ["v", "a", "n"];
+  const jobArray = [
+    "s",
+    "o",
+    "f",
+    "t",
+    "w",
+    "a",
+    "r",
+    "e",
+    " ",
+    "e",
+    "n",
+    "g",
+    "i",
+    "n",
+    "e",
+    "e",
+    "r",
+  ];
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLetterClass("text-animate-hover");
+    }, 4000);
+
+    return () => clearTimeout(timeout); // Cleanup function
+  }, []);
+
   return (
     // <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="profile">
     //     <div className="profile__desc">
@@ -22,17 +56,30 @@ const ProfileInfo = () => {
     <div className="container profile">
       <div className="profile-text">
         <h1>
-          Hi, <br /> I'm
-          <img src={logo} alt="Letter I" />
-          van
+          <span className={letterClass}>H</span>
+          <span className={`${letterClass} _12`}>i,</span>
           <br />
-          software engineer
+          <span className={`${letterClass} _13`}>I</span>
+          <span className={`${letterClass} _14`}>'m</span>
+          <img src={logo} alt="Letter I" />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={nameArray}
+            index={15}
+          />
+          <br />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={jobArray}
+            index={18}
+          />
         </h1>
         <h2>Full-Stack Developer / Coding Enthusiast / Fashion Lover</h2>
         <Link to="/contact" className="profile-button">
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   );
 };

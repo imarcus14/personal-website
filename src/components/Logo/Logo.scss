@@ -1,0 +1,35 @@
+.logo-container {
+    width: 250px;
+    height: 10rem;
+    position: absolute;
+    top: 0;
+    right: 22%;
+    bottom: 23rem;
+    left: auto;
+    margin: auto;
+    opacity: 0;
+  
+    svg {
+      width: 100%;
+      height: auto;
+      bottom: 0;
+    //   transform: rotateZ(30deg) !important;
+    }
+  
+    .solid-logo {
+      position: absolute;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  
+  .svg-container path {
+    stroke: white;
+    stroke-width: 3px; /* ✅ Ensure stroke is visible */
+    fill: transparent; /* ✅ Start with no fill */
+    transition: fill 0.5s ease-in-out; /* ✅ Smooth transition to white */
+  }
+  
+  
