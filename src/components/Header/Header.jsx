@@ -36,19 +36,19 @@ const Header = () => {
         </Link>
         <Link
           className={`header__link ${
-            activeLink === "/projects" ? "header__link--active" : ""
+            activeLink === "/about" ? "header__link--active" : ""
           }`}
-          to="/projects"
-          onClick={() => handleClick("/projects")}
+          to="/about"
+          onClick={() => handleClick("/about")}
         >
           <h3>About</h3>
         </Link>
         <Link
           className={`header__link ${
-            activeLink === "/projects" ? "header__link--active" : ""
+            activeLink === "/contact" ? "header__link--active" : ""
           }`}
-          to="/projects"
-          onClick={() => handleClick("/projects")}
+          to="/contact"
+          onClick={() => handleClick("/contact")}
         >
           <h3>Contact</h3>
         </Link>

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
-import logo from "../../assets/icons/italic-i.svg";
+import logo from "../../assets/icons/new-i.svg";
 import { motion } from "motion/react";
 import profilePic from "../../assets/photos/website-pic.jpg";
 
@@ -79,7 +79,7 @@ const ProfileInfo = () => {
           CONTACT ME
         </Link>
       </div>
-      <Logo />
+      {/* <Logo /> */}
     </div>
   );
 };

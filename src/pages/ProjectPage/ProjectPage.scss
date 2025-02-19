@@ -5,33 +5,43 @@
     &__one{
         display: flex;
         flex-direction: column;
-        background-color: #3B3545;
-        padding: 1rem 0;
+        background-color: #2C2B3C;
+        margin: 10rem 0;
+        padding: 1rem 0 2rem 0;
     }
     &__one-photos{
         // background-color: #333;
-        overflow: auto;
-        white-space: nowrap;
-        padding: 0 0.75rem 0.75rem 0.75rem;
+        // overflow: auto;
+        // white-space: nowrap;
+        // padding: 0 0.75rem 0.75rem 0.75rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 48rem;
+        // justify-items: stretch;
+        animation: animation 20s linear infinite;
+        
     }
     &__one-photo{
-        height: 20rem;
-        width: 32.5rem;
+        height: 25rem;
+        width: 47rem;
         padding: 0.75rem;
+        object-fit: cover;
+        margin: 0 5rem;
+        border-radius: 2rem;
     }
     &__one-title{
         width: 96%;
         margin: auto;
         padding-top: 1rem;
         font-family: "Teko";
-        color: #B8D8D8;
+        color: white;
         font-size: 2rem;
     }
     &__one-description{
         width: 96%;
         margin: auto;
         padding: 0.75rem 1rem 1rem 1rem;
-        color: #B8D8D8;
+        color: white;
         font-family: "Teko";
         font-size: 1.5rem;
     }
@@ -39,15 +49,31 @@
         width: 96%;
         margin: auto;
         padding: 0 1rem;
-        color: #B8D8D8;
+        color: white;
         font-family: "Teko";
     }
     &__link{
         width: 96%;
         margin: auto;
         padding: 0 1rem;
-        color: #B8D8D8;
+        color: white;
         font-family: "Teko";
 
+    }
+}
+
+.carousel{
+    overflow: hidden;
+    // width: 700px;
+    background-color: #2C2B3C;
+    // padding: 30px 0;
+    // margin-top: 60px;
+    border-radius: 5px;
+    // box-shadow: 20px 35px 35px rgba(0,0,0,0.5);
+}
+
+@keyframes animation{
+    to{
+        translate: calc(-4*825px);
     }
 }

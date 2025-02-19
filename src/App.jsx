@@ -13,8 +13,10 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<ProfilePage />} />
+          <Route index element={<ProfilePage />} />
           <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/contact" element={""} />
+          <Route path="/about" element={""} />
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>

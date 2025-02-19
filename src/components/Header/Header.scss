@@ -1,59 +1,80 @@
-.header{
-    // display: flex;
-    // justify-content: start;
-    // height: 2rem;
-    // align-items: center;
-    // padding: 2rem 1rem;
-    // font-size: 1.5rem;
-    // font-family: "Jaldi";
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-    position: absolute;
-    width: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 2rem;
-    border-radius: 30px;
-    border: 1px solid rgba(18, 20, 32, 0.5);
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+// .header{
+//     background: rgba(255, 255, 255, 0.15);
+//     backdrop-filter: blur(10px);
+//     padding: 1rem;
+//     position: absolute;
+//     width: 65%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     top: 2rem;
+//     border-radius: 30px;
+//     border: 1px solid rgba(18, 20, 32, 0.5);
+//     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
     
   
-    &__link{
-        color: white;
-        text-decoration: none;  
-        letter-spacing: 3px;
-        &--active{
+//     &__link{
+//         color: white;
+//         text-decoration: none;  
+//         letter-spacing: 3px;
+//         &--active{
             
-            text-decoration: underline;
-        }
+//             text-decoration: underline;
+//         }
+//     }
+// }
+
+.header {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  position: absolute;
+  width: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(18, 20, 32, 0.5);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    position: relative; // Required for the pseudo-element positioning
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%; // Start from the center
+      bottom: -2px; // Position the underline below the text
+      width: 0; // Start with no width
+      height: 2px; // Thickness of the underline
+      background-color: white; // Color of the underline
+      transition: width 0.3s ease, left 0.3s ease; // Smooth transition
     }
+
+    &:hover::after {
+      width: 100%; // Expand the underline to full width
+      left: 0; // Move the starting point to the left edge
+    }
+
+    &--active {
+      &::after {
+        width: 100%; // Keep the underline fully expanded for active links
+        left: 0;
+      }
+    }
+  }
 }
 
-// .header-logo{
-//     display: flex;
-//     flex-direction: column;
-// }
 
-// .i-logo{
-//     height: 8%;
-//     /* padding: 0; */
-//     /* margin: 0; */
-//     position: absolute;
-//     top: 8px;
-//     left: 15px;
-// }
-
-// .ivan-logo{
-//     height: 8%;
-//     /* padding: 0; */
-//     position: absolute;
-//     top: 45px;
-//     left: -15px;
-// }
 
 .header-links{
     display: flex;
