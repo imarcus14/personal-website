@@ -87,16 +87,16 @@
 
 .contact-options{
     display: flex;
-    position: absolute;
-    align-items: baseline;
-    gap: 1rem;
-    right: 40px;
-    top: 25px;
+        position: absolute;
+        /* align-items: center; */
+        gap: 1rem;
+        /* right: 0rem; */
+        /* top: 25px; */
+        left: 65.5rem;
 }
 
 .contact-img{
-    width: 3rem;
-    height: 3rem;
+   height: 2rem;
 }
 
 .contact-icon{

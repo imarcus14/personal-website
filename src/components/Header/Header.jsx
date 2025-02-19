@@ -1,5 +1,8 @@
 import "./Header.scss";
 
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import github from "../../assets/icons/github.svg";
 import gmail from "../../assets/icons/gmail.svg";
@@ -54,23 +57,46 @@ const Header = () => {
         </Link>
       </div>
 
-      {/* <div className="contact-options">
+      <div className="contact-options">
         <div className="contact-icon">
-          <Link to="https://www.linkedin.com/in/ivan-marcus/">
-            <img className="contact-img" src={linkedin} alt="linkedin icon" />
+          <Link
+            to="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://www.linkedin.com/in/ivan-marcus/",
+                "_blank",
+                "noopener,noreferrer"
+              );
+            }}
+          >
+            <FontAwesomeIcon
+              className="contact-img"
+              icon={faLinkedin}
+              color="#121420"
+            />
           </Link>
         </div>
         <div className="contact-icon">
-          <Link to="mailto:ivanmarcus1@gmail.com">
-            <img className="contact-img" src={gmail} alt="Gmail icon" />
+          <Link
+            to="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://github.com/imarcus14",
+                "_blank",
+                "noopener,noreferrer"
+              );
+            }}
+          >
+            <FontAwesomeIcon
+              className="contact-img"
+              icon={faGithub}
+              color="#121420"
+            />
           </Link>
         </div>
-        <div className="contact-icon">
-          <Link to="https://github.com/imarcus14">
-            <img className="contact-img" src={github} alt="Gmail icon" />
-          </Link>
-        </div>
-      </div> */}
+      </div>
     </div>
   );
 };
