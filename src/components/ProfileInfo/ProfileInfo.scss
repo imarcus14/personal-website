@@ -1,38 +1,4 @@
-// .profile{
-//     display: flex;
-//     width: 90%;
-//     margin: auto;
-//     align-items: center;
-//     gap: 5rem;
-//     padding: 3rem;
-//     font-family: "Teko";
-//     font-size: 1.5rem;
-//     color: #3B3545;
 
-//     &__title{
-//         text-decoration: underline;
-//         font-size: 2.5rem;
-//     }
-
-//     &__desc{
-//         display: flex;
-//         flex-direction: column;
-//         width: 60%;
-//         gap: 1.5rem;
-//     }
-
-//     &__paragraphs{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 1rem;
-//     }
-
-//     &__pic{
-//         height: 30rem;
-//         border-radius: 14rem;
-//         width: 30%;
-//     }
-// }
 
 
 
@@ -119,3 +85,89 @@
 }
 
 
+.cube-icon{
+    height: 6rem;
+}
+
+.skills-cube {
+    width: 60%;
+    height: 100%;
+    top: -2rem;
+    padding-top: 18%;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    animation: fadeIn 3s ease-in-out forwards;
+
+    &__spinning {
+        animation: spincube 12s ease-in-out infinite;
+        transform-style: preserve-3d;
+        transform-origin: 175px 175px 0; // Half of 350px
+        margin-left: calc(50% - 175px); // Adjust for new size
+
+        div {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            background: rgba(64, 63, 76, 0.4);
+            font-size: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px 0px white;
+        }
+
+        .face1 {
+            transform: translateZ(175px);
+        }
+        .face2 {
+            transform: rotateY(90deg) translateZ(175px);
+        }
+        .face3 {
+            transform: rotateY(90deg) rotateX(90deg) translateZ(175px);
+        }
+        .face4 {
+            transform: rotateY(180deg) rotateZ(90deg) translateZ(175px);
+        }
+        .face5 {
+            transform: rotateY(-90deg) rotateZ(90deg) translateZ(175px);
+        }
+        .face6 {
+            transform: rotateX(-90deg) translateZ(175px);
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spincube{
+    from,
+    to{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66%{
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    83%{
+        transform: rotateX(-90deg);
+
+    }
+}
