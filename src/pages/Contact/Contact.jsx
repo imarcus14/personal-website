@@ -14,9 +14,9 @@ const Contact = () => {
         </p>
 
         <p>
-          Happy to discuss free lance, part-time, and full-time roles and
-          discuss how I am able to contribute my skills with the background I
-          have to your goals. The form to contact is below.
+          Happy to discuss freelance, part-time, and full-time roles and discuss
+          how I am able to contribute my skills with the background I have to
+          your goals. The form to contact is below.
         </p>
       </div>
       <ContactForm />

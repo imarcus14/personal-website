@@ -45,7 +45,7 @@ const ProfileInfo = () => {
   }, []);
 
   return (
-    <div>
+    <div className="profile-info">
       <div className="container profile">
         <div className="profile-text">
           <h1>

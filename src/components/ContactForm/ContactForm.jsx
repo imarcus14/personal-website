@@ -35,7 +35,11 @@ const ContactForm = () => {
       </div>
       <div className="form-lower">
         <input type="text" name="subject" placeholder="Subject" required />
-        <textarea placeholder="Message" name="message" required></textarea>
+        <textarea
+          placeholder="Please put your message here"
+          name="message"
+          required
+        ></textarea>
         <input type="submit" className="flat-button" value="SEND" />
       </div>
     </form>
