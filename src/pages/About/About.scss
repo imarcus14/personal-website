@@ -43,3 +43,40 @@
         opacity: 1;
     }
 }
+
+
+.about__pic-container {
+    display: inline-block;
+    position: relative;
+    left: 3rem;
+  }
+  
+  .about__pic-container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid transparent;
+    border-radius: 14rem;
+    animation: borderExpand 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes borderExpand {
+    0% {
+      border-color: transparent;
+      transform: scale(1);
+    }
+    100% {
+      border-color: #403F4C;
+      transform: scale(1.2); 
+    }
+  }
+  
+  .about__pic {
+    display: block;
+    width: 20rem; 
+    height: auto;
+  }
+  

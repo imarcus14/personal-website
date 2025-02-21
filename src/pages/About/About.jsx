@@ -29,16 +29,18 @@ const About = () => {
             A little extra about me, I am a big sneakerhead and I love fashion,
             hence the background in luxury retail. I’m a lover of food and being
             able to try dishes I have never tried before, as well I have
-            recently started to dive deeper into gaming.{" "}
+            recently started to dive deeper into gaming.
           </p>
           <p>I also have an very cute dog if you ever want to see pictures.</p>
         </div>
       </div>
-      <img
-        className="about__pic"
-        src={profilePic}
-        alt="profile picture of me"
-      />
+      <div className="about__pic-container">
+        <img
+          className="about__pic"
+          src={profilePic}
+          alt="profile picture of me"
+        />
+      </div>
     </div>
     // </motion.div>
   );
