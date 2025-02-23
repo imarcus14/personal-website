@@ -1,4 +1,4 @@
-import "./ABout.scss";
+import "./About.scss";
 
 // import { motion } from "motion/react";
 import profilePic from "../../assets/photos/website-pic.jpg";
